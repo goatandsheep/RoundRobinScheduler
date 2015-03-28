@@ -10,5 +10,12 @@ package rr;
  * @author user
  */
 public class RRScheduler {
+	
+	/*
+	 * from LTSA
+	 * 
+	 * || RR_SCHEDULER = (QUEUE || GENERATOR || DISPATCHER || CPU || GRIMREAPER).
+	 * 
+	 */
     
 }

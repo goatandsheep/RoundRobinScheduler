@@ -10,5 +10,10 @@ package rr;
  * @author user
  */
 public class Dispatcher {
+	
+	/*from LTSA
+	 * 
+	 * DISPATCHER = (process_MoveToCPU -> process_Execute -> DISPATCHER).
+	 */
     
 }

@@ -10,5 +10,11 @@ package rr;
  * @author user
  */
 public class Generator {
+	
+	/*from LTSA
+	 * 
+	 * GENERATOR = (process_Add -> GENERATOR). //generator simply keeps track of queue size
+	 * 
+	 */
     
 }

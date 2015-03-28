@@ -11,4 +11,13 @@ package rr;
  */
 public class ReadyQueue {
     
+	/*from LTSA
+	 * 
+	 * QUEUE = QUEUE[0],
+	 * QUEUE[x:0..Max] = (when (x<Max) process_Add -> QUEUE[x+1]
+                                    | when (x>0) process_MoveToCPU -> CONTROL[x]),
+     * CONTROL[y:1..Max] = (process_Remove -> QUEUE[y-1]
+                        | process_MoveToBackOfQueue -> QUEUE[y]).
+	 */
+	
 }

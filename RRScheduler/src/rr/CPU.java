@@ -10,5 +10,13 @@ package rr;
  * @author user
  */
 public class CPU {
+	
+	/*
+	 * from LTSA
+	 * 
+	 * CPU = (process_Execute -> process_CheckExecutionTimeRemaining -> CPU).
+	 * 
+	 * 
+	 */
     
 }

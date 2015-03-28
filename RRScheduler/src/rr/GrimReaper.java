@@ -10,5 +10,16 @@ package rr;
  * @author user
  */
 public class GrimReaper {
+	
+	/*
+	 * from LTSA
+	 * 
+	 * GRIMREAPER = (process_CheckExecutionTimeRemaining -> GRIM),
+	 * 
+	 * GRIM = (process_Remove -> GRIMREAPER
+            |process_MoveToBackOfQueue -> GRIMREAPER)
+	 * 
+	 */
+	
     
 }
