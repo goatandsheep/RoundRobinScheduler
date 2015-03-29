@@ -17,5 +17,7 @@ public class RRScheduler {
 	 * || RR_SCHEDULER = (QUEUE || GENERATOR || DISPATCHER || CPU || GRIMREAPER).
 	 * 
 	 */
-    
+    public static void main(String[] args){
+    	
+    }
 }
