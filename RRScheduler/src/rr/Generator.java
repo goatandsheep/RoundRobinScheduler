@@ -5,6 +5,8 @@
  */
 package rr;
 
+import 
+
 /**
  *
  * @author user
@@ -15,6 +17,34 @@ public class Generator {
 	 * 
 	 * GENERATOR = (process_Add -> GENERATOR). //generator simply keeps track of queue size
 	 * 
+	 * it could create a new instance of process, each w its
+	 * own execution time and unique identifier of incrementing
+	 * or randomly generated numbers
+	 * 
+	 * push processes onto the queue
+	 * 
 	 */
     
+	
+	
+	//time and unique identifiers could be functions of 
+	//2 different random numbers
+	
+	//total time to execute the process; becomes the remaining 
+	//time as it is decremented by quanta each time the process
+	//is reached in the queue
+	double execTime = (Math.random()*12) + 12; 
+	
+	double id = (Math.random()*12) + 12;
+	
+	ReadyQueue queue = new ReadyQueue();
+	
+	Process pro = new Process(execTime, id); //pass in arguements of time 
+	
+	//add process to end of queue
+	queue.offer(pro);
+	
+	//length of queue
+	
+	int qLen = queue.size();
 }

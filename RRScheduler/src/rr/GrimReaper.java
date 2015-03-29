@@ -21,5 +21,10 @@ public class GrimReaper {
 	 * 
 	 */
 	
+	//if execTime!=0 move to back of queue
+	
+	//if execTime=0, remove from queue  
+	
+	
     
 }
