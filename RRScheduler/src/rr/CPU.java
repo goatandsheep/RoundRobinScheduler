@@ -18,5 +18,17 @@ public class CPU {
 	 * 
 	 * 
 	 */
-    
+	double quantum; //quantum for the process
+	
+	//process goes on!
+	//
+	public CPU (Process currentProcess){		
+		
+		
+	//updates remaining time!
+	currentProcess.afterQuantum(quantum); //decrease remaining time 
+	} 
+	
+	
 }
+
