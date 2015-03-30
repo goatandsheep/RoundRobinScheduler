@@ -2,11 +2,14 @@ package rr;
 
 public class RRScheduler {
 
-	public void main(String[] args) throws InterruptedException {
-    	
-		double min = 1.00, max = 10.00;
+	public static void main(String[] args) throws InterruptedException {
+    	int maxQ = 10;
+		double minExcT =1, maxExcT = 10, quantum = 7;
 		
-		Generator.run(min, max);
-		Dispatcher.loadProcess();	
+		Thread dispatcherThread = new Dispatcher(quantum);
+		Thread generatorThread = new Generator(minExcT, maxExcT, maxQ);
+		
+		dispatcherThread.start();
+		generatorThread.start();
     }
 }
