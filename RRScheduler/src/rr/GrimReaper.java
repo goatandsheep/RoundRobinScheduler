@@ -20,7 +20,7 @@ public class GrimReaper {
             |process_MoveToBackOfQueue -> GRIMREAPER)
 	 * 
 	 */
-	public void GrimReaper(Process pro){
+	public GrimReaper(Process pro){
 		
 	//if remaining Time!=0 move to back of queue
 		if (pro.tRemaining >0){
