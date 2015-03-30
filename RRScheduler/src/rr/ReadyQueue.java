@@ -4,7 +4,7 @@ import java.util.*;
 
 public class ReadyQueue {
 	
-	private static Queue theQueue<Process>= new LinkedList<Process>();
+	private static Queue<Process> theQueue= new LinkedList<Process>();
 	//private LinkedList<Process> queue = new LinkedList<Process>();
 	//public int size;
 	/*
