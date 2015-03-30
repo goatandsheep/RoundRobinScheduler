@@ -1,7 +1,7 @@
 package rr;
 
 public class CPU {
-	private static double quantum = 5.00; // Quantum for the process.
+	private static double quantum; // Quantum for the process.
 	private static boolean locked = false;	// Lock flag.
 	private static final Object lock = new Object(); //Lock object.
 	
@@ -10,8 +10,10 @@ public class CPU {
 	// During execution the CPU is locked. Only one process can be executed at a time.
 	// Once done execution, GrimReaper unloads the process.
 	
-	public static void executeProcess(Process pro) throws InterruptedException {
+	public static void executeProcess(Process pro, double quant) throws InterruptedException {
 		synchronized(lock){
+			
+			quantum = quant; // Assigning quantum value.
 			
 			if (locked) // If locked wait to be notified.
 		    		lock.wait();
