@@ -1,15 +1,10 @@
 package rr;
 
 public class CPU {
-	double quantum; //quantum for the process
-	boolean locked;
-
-	public CPU (double quan){
-		this.quantum = quan;
-		this. locked = false;
-	}
+	double quantum = 7; //quantum for the process
+	boolean locked = false;
 	
-	public void process(Process pro) throws InterruptedException {
+	public Process process(Process pro) throws InterruptedException {
 		if (locked)
 			this.wait();
 		else {
@@ -18,6 +13,8 @@ public class CPU {
 			locked = false;
 			notify();
 		}
+		
+		return pro;
 				
 	}
 	
