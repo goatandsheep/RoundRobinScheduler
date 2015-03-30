@@ -15,7 +15,8 @@ public class CPU {
 		    		System.out.println("CPU: Process " +pro.getid() +" executed for " +quantum +" seconds.");
 		    	else
 		    		System.out.println("CPU: Process " +pro.getid() +" executed for " +pro.getTime() +" seconds.");
-		    	pro.afterQuantum(quantum);
+		    	pro.execute(quantum);
+		    	GrimReaper.unloadProcess(pro);
 		    	locked = false;
 		    	lock.notify();
 		   }
