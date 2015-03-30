@@ -2,7 +2,7 @@ package rr;
 
 public class Dispatcher {
 	
-	public void run() throws InterruptedException {
+	public void loadProcess() throws InterruptedException {
 		while (ReadyQueue.getSize() > 0) {
 			Process pro = ReadyQueue.removeProcess();
 			System.out.println("Dispatcher: Process " +pro.getid() +" loaded into CPU.");
