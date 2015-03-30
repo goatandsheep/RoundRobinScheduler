@@ -19,5 +19,7 @@ public class RRScheduler {
 	 */
     public static void main(String[] args){
     	//call generator until length of queue is reached
+    	Generator.run();
+    	
     }
 }

@@ -2,17 +2,15 @@ package rr;
 
 public class Process {
 	
-	double id;
-	double execTime;
-	double tRemaining;
+	private int id;
+	private double tRemaining;
 
 	/*Constructor
 	 * from Generator, process could be created with random id and random execTime.
 	 * since it's a new process time remaining is same as execution time.*/
 
-	public Process(double id, double execTime) {
+	public Process(int id, double execTime) {
 		this.id = id;
-		this.execTime = execTime;
 		this.tRemaining = execTime;
 	}
 
@@ -26,5 +24,11 @@ public class Process {
 		}
 		else
 			this.tRemaining = 0;
+	}
+	public int getid(){
+		return id;
+	}
+	public double getTime(){
+		return tRemaining;
 	}
 }
