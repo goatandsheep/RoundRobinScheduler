@@ -34,8 +34,7 @@ public class GrimReaper {
 		
 	//if remaining time <0, show error message
 		else {
-			
-			
+			System.out.println("");
 			
 		}
 	
