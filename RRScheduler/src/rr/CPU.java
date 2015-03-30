@@ -1,9 +1,9 @@
 package rr;
 
 public class CPU {
-	private static double quantum = 7.00; // Quantum for the process
-	private static boolean locked = false;	// Lock flag
-	private static final Object lock = new Object(); //Lock object
+	private static double quantum = 7.00; // Quantum for the process.
+	private static boolean locked = false;	// Lock flag.
+	private static final Object lock = new Object(); //Lock object.
 	
 	
 	// This CPU method executes a given process.
@@ -15,7 +15,7 @@ public class CPU {
 			
 			if (locked) // If locked wait to be notified.
 		    		lock.wait();
-		    	else // Else execute process 
+		    	else // Else execute process. 
 		    	{
 		    		locked = true; // Lock CPU
 		    		if (pro.getTime() >= quantum) // Output process execution details.
@@ -24,8 +24,8 @@ public class CPU {
 		    			System.out.println("CPU: Process " +pro.getid() +" executed for " +pro.getTime() +" seconds.");
 		    		pro.execute(quantum); // Execute process.
 		    		GrimReaper.unloadProcess(pro); // Call GrimReaper to unload process.
-		    		locked = false; // Unlock CPU
-		    		lock.notify(); // Notify
+		    		locked = false; // Unlock CPU.
+		    		lock.notify(); // Notify.
 		   	}
 		}
 				
