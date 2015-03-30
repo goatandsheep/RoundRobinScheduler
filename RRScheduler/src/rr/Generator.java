@@ -42,6 +42,11 @@ public class Generator {
 	
 	public void stop(){
 		//throw an error
-		throw new
+		try {
+			wait();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }
