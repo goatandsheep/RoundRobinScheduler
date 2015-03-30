@@ -1,23 +1,36 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package rr;
 
-/**
- *
- * @author user
- */
+import java.util.*;
+
 public class ReadyQueue {
-    
-	/*from LTSA
-	 * 
-	 * QUEUE = QUEUE[0],
-	 * QUEUE[x:0..Max] = (when (x<Max) process_Add -> QUEUE[x+1]
-                                    | when (x>0) process_MoveToCPU -> CONTROL[x]),
-     * CONTROL[y:1..Max] = (process_Remove -> QUEUE[y-1]
-                        | process_MoveToBackOfQueue -> QUEUE[y]).
-	 */
 	
+	private LinkedList<Process> queue = new LinkedList<Process>();
+	public int size;
+	
+	ReadyQueue() {
+		this.size=0;		
+	}
+	
+	public void addProcess(Process pro) {
+		this.queue.addLast(pro);
+		this.size++;
+		notify();
+	}
+	
+	public Process removeProcess() {
+		if (size > 0) {
+			Process nextPro = this.queue.getFirst();
+			this.queue.removeFirst();
+			this.size--;
+			return nextPro;
+		}
+		else
+			return null;
+		
+	}
+	
+	public int size () {
+		return this.size();
+	}
+
 }
