@@ -1,21 +1,23 @@
 package rr;
 
 public class CPU {
-	double quantum = 7; //quantum for the process
-	boolean locked = false;
+	private static double quantum = 7; //quantum for the process
+	private static boolean locked = false;	
+	private static final Object lock = new Object();
 	
-	public Process process(Process pro) throws InterruptedException {
-		if (locked)
-			this.wait();
-		else {
-			locked = true;
-			pro.afterQuantum(this.quantum);
-			locked = false;
-			notify();
-		}
-		
+	public static Process process(Process pro) throws InterruptedException {
+		synchronized(lock){
+		    if (locked)
+		    	lock.wait();
+		    else {
+		    	locked = true;
+		    	pro.afterQuantum(quantum);
+		    	locked = false;
+		    	lock.notify();
+		   }
+						
 		return pro;
+		}
 				
-	}
-	
+	}	
 }
