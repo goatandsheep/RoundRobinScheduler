@@ -4,34 +4,33 @@ import java.util.*;
 
 public class ReadyQueue {
 	
-	private LinkedList<Process> queue = new LinkedList<Process>();
-	public int size;
+	private Queue queue<Process>= new LinkedList<Process>();
+	//private LinkedList<Process> queue = new LinkedList<Process>();
+	//public int size;
 	
 	ReadyQueue() {
-		this.size=0;		
+		queue = new LinkedList();
 	}
 	
 	public void addProcess(Process pro) {
-		this.queue.addLast(pro);
-		this.size++;
+		this.queue.add(pro);
 	}
 	
 	public Process removeProcess() {
-		if (size > 0) {
+		/*if (size > 0) {
 			Process nextPro = this.queue.getFirst();
 			this.queue.removeFirst();
 			this.size--;
 			return nextPro;
 		}
 		else
-			return null;
+			return null;*/
+		return queue.remove();
 		
 	}
 	
 	public int getSize () {
-
-		return this.getSize();
-
+		return queue.size();
 	}
 
 }
