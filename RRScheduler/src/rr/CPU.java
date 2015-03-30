@@ -27,6 +27,11 @@ public class CPU {
 		
 	//updates remaining time!
 	currentProcess.afterQuantum(quantum); //decrease remaining time 
+	
+	//send this to GrimReaper
+	GrimReaper(Process currentProcess);
+	
+	
 	} 
 	
 	
