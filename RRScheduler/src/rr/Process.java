@@ -20,10 +20,10 @@ public class Process {
 
 	public void afterQuantum(double quantum) {
 		if (tRemaining > 0) {
-			this.tRemaining = this.tRemaining - quantum; 
+			tRemaining = tRemaining - quantum; 
 		}
 		else
-			this.tRemaining = 0;
+			tRemaining = 0;
 	}
 	public int getid(){
 		return id;
