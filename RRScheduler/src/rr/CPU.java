@@ -1,7 +1,7 @@
 package rr;
 
 public class CPU {
-	private static double quantum = 7.00; // Quantum for the process.
+	private static double quantum = 5.00; // Quantum for the process.
 	private static boolean locked = false;	// Lock flag.
 	private static final Object lock = new Object(); //Lock object.
 	
