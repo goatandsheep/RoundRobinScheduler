@@ -14,7 +14,6 @@ public class ReadyQueue {
 	public void addProcess(Process pro) {
 		this.queue.addLast(pro);
 		this.size++;
-		notify();
 	}
 	
 	public Process removeProcess() {
@@ -29,7 +28,7 @@ public class ReadyQueue {
 		
 	}
 	
-	public int size () {
+	public int getSize () {
 		return this.size();
 	}
 
