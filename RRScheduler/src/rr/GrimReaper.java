@@ -11,7 +11,7 @@ public class GrimReaper {
 			System.out.println("Reaper: Process " +pro.getid() +" finished executing.");
 		else // Else add process to ready queue and output details.
 		{
-			ReadyQueue.addProcess(pro); 
+			ReadyQueue.addProcess(pro); // Add process to ready queue.
 			System.out.println("Reaper: Process " +pro.getid() +" recycled into ready queue with " +pro.getTime() +" second(s) remaining.");
 		}
 	}
