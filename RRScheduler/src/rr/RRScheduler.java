@@ -18,15 +18,22 @@ public class RRScheduler {
 	 * 
 	 */
     public void main(String[] args){
-    	
+    	int i = 1;
     	while(true){
         	if (ReadyQueue.getSize() < 20){
-        		Generator.run();
+        		
+        		Generator.run(i);
         		//cap queue size at 20	
     		}
         	else{
-        		wait();
+        		try {
+					wait();
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
         	}
+        	i++;
     	}
     	
     	

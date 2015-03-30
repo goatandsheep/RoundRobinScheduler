@@ -32,7 +32,7 @@ public class Generator {
 	//is reached in the queue
 	
 
-	public void run(int id){
+	public static void run(int id){
 		//add process to end of queue
 		double execTime = (Math.random()*12); 
 		Process pro = new Process(id, execTime); //pass in arguements of time 
