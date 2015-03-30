@@ -29,7 +29,7 @@ public class ReadyQueue {
 	}
 	
 	public int getSize () {
-		return this.size();
+		return this.size;
 	}
 
 }
