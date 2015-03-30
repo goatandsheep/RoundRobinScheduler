@@ -9,10 +9,16 @@ public class CPU {
 		this. locked = false;
 	}
 	
-	public void process(Process pro) {
-		locked = true;
-		pro.afterQuantum(this.quantum);
-		locked = false;
+	public void process(Process pro) throws InterruptedException {
+		if (locked)
+			this.wait();
+		else {
+			locked = true;
+			pro.afterQuantum(this.quantum);
+			locked = false;
+			notify();
+		}
+				
 	}
 	
 }
