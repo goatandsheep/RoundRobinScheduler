@@ -35,8 +35,8 @@ public class Generator {
 
 	public void run(){
 		//add process to end of queue
-		double execTime = (Math.random()*12) + 12; 
-		int id = (int)((Math.random()*12) + 12);
+		double execTime = (Math.random()*12); 
+		int id = ReadyQueue.getSize() +1;
 		Process pro = new Process(execTime,  id); //pass in arguements of time 
 		ReadyQueue.addProcess(pro);
 	}
