@@ -32,19 +32,16 @@ public class Generator {
 	//time as it is decremented by quanta each time the process
 	//is reached in the queue
 	
-	double execTime = (Math.random()*12) + 12; 
-	
-	double id = (Math.random()*12) + 12;
-	
-	
+
 	public void run(){
 		//add process to end of queue
-		Process pro = new Process(execTime, id); //pass in arguements of time 
+		double execTime = (Math.random()*12) + 12; 
+		int id = (int)((Math.random()*12) + 12);
+		Process pro = new Process(execTime,  id); //pass in arguements of time 
 		ReadyQueue.addProcess(pro);
 	}
 	
 	public void stop(){
-		
+		//throw an error
 	}
-
-	}
+}

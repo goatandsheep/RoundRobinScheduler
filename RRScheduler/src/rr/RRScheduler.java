@@ -18,8 +18,23 @@ public class RRScheduler {
 	 * 
 	 */
     public static void main(String[] args){
+    	
+    	Generator gen = new Generator();
     	//call generator until length of queue is reached
+<<<<<<< HEAD
     	Generator.run();
+=======
+    	for (int i = 0 ; i<21; i++){
+        	if (ReadyQueue.getSize() < 20){
+        		gen.run();
+        		//cap queue size at 20	
+    		}
+        	else{
+        		gen.stop();
+        	}
+    	}
+    	
+>>>>>>> adbf272c75fbf7cc03f97a4cc42bfc8fb2d1c51e
     	
     }
 }
