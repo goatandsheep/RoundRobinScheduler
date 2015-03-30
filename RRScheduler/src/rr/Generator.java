@@ -42,9 +42,11 @@ public class Generator {
 	Process pro = new Process(execTime, id); //pass in arguements of time 
 	
 	//add process to end of queue
-	queue.offer(pro);
+	queue.addProcess(pro);
 	
 	//length of queue
 	
-	int qLen = queue.size();
+	int qLen = queue.getSize();
+	//wait for queue to be less than certain size before adding to
+	//more processes to the end
 }
