@@ -42,7 +42,6 @@ public class Generator {
 	}
 	
 	public void stop(){
-		
+		//throw an error
 	}
-
-	}
+}
