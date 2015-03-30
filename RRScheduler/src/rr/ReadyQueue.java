@@ -7,10 +7,10 @@ public class ReadyQueue {
 	private Queue queue<Process>= new LinkedList<Process>();
 	//private LinkedList<Process> queue = new LinkedList<Process>();
 	//public int size;
-	
+	/*
 	ReadyQueue() {
 		queue = new LinkedList();
-	}
+	}*/
 	
 	public void addProcess(Process pro) {
 		this.queue.add(pro);
