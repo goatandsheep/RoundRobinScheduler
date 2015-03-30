@@ -18,6 +18,7 @@ public class RRScheduler {
 	 * 
 	 */
     public static void main(String[] args){
-    	
+    	ReadyQueue queue = new ReadyQueue();
+    	Generator gen = new Generator(queue);
     }
 }

@@ -5,8 +5,6 @@
  */
 package rr;
 
-import 
-
 /**
  *
  * @author user
@@ -33,11 +31,10 @@ public class Generator {
 	//total time to execute the process; becomes the remaining 
 	//time as it is decremented by quanta each time the process
 	//is reached in the queue
+	public Generator(ReadyQueue queue){
 	double execTime = (Math.random()*12) + 12; 
 	
 	double id = (Math.random()*12) + 12;
-	
-	ReadyQueue queue = new ReadyQueue();
 	
 	Process pro = new Process(execTime, id); //pass in arguements of time 
 	
@@ -49,4 +46,5 @@ public class Generator {
 	int qLen = queue.getSize();
 	//wait for queue to be less than certain size before adding to
 	//more processes to the end
+	}
 }
