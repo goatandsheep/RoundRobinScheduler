@@ -23,8 +23,7 @@ public class Generator {
 	 * 
 	 */
     
-	
-	
+		
 	//time and unique identifiers could be functions of 
 	//2 different random numbers
 	
@@ -33,11 +32,10 @@ public class Generator {
 	//is reached in the queue
 	
 
-	public void run(){
+	public void run(int id){
 		//add process to end of queue
 		double execTime = (Math.random()*12); 
-		int id = ReadyQueue.getSize() +1;
-		Process pro = new Process(execTime,  id); //pass in arguements of time 
+		Process pro = new Process(id, execTime); //pass in arguements of time 
 		ReadyQueue.addProcess(pro);
 	}
 	
