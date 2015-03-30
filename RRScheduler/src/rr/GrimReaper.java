@@ -20,11 +20,25 @@ public class GrimReaper {
             |process_MoveToBackOfQueue -> GRIMREAPER)
 	 * 
 	 */
+	public void GrimReaper(Process pro){
+		
+	//if remaining Time!=0 move to back of queue
+		if (pro.tRemaining >0){
+			
+			
+		}
+	//if remaining time=0, remove from queue  
+		else if (pro.tRemaining ==0){
+			
+		}
+		
+	//if remaining time <0, show error message
+		else {
+			
+			
+			
+		}
 	
-	//if execTime!=0 move to back of queue
-	
-	//if execTime=0, remove from queue  
-	
-	
+	}
     
 }
