@@ -1,39 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package rr;
 
-/**
- *
- * @author user
- */
 public class CPU {
-	
-	/*
-	 * from LTSA
-	 * 
-	 * CPU = (process_Execute -> process_CheckExecutionTimeRemaining -> CPU).
-	 * 
-	 * 
-	 */
 	double quantum; //quantum for the process
+	boolean locked;
+
+	public CPU (double quan){
+		this.quantum = quan;
+		this. locked = false;
+	}
 	
-	//process goes on!
-	//
-	public CPU (Process currentProcess){		
-		
-		
-	//updates remaining time!
-	currentProcess.afterQuantum(quantum); //decrease remaining time 
-	
-	//send this to GrimReaper
-	GrimReaper(Process currentProcess);
-	
-	
-	} 
-	
+	public void process(Process pro) {
+		locked = true;
+		pro.afterQuantum(this.quantum);
+		locked = false;
+	}
 	
 }
-
