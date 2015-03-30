@@ -37,6 +37,7 @@ public class Generator {
 		double execTime = (Math.random()*12); 
 		Process pro = new Process(id, execTime); //pass in arguements of time 
 		ReadyQueue.addProcess(pro);
+		System.out.println("Generator: Process " +id +" loaded into ready queue.");
 	}
 	
 	public void stop(){
