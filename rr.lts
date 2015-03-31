@@ -1,0 +1,20 @@
+const Max = 10 //size of queue
+
+QUEUE = QUEUE[0],
+QUEUE[x:0..Max] = (when (x<Max) process_Add -> QUEUE[x+1]
+                                    | when (x>0) process_MoveToCPU -> CONTROL[x]),
+CONTROL[y:1..Max] = (process_Remove -> QUEUE[y-1]
+                        | process_MoveToBackOfQueue -> QUEUE[y]).
+
+GENERATOR = (process_Add -> GENERATOR). //generator simply keeps track of queue size
+
+DISPATCHER = (process_MoveToCPU -> process_Execute -> DISPATCHER).
+
+CPU = (process_Execute -> process_CheckExecutionTimeRemaining -> CPU).
+
+GRIMREAPER = (process_CheckExecutionTimeRemaining -> GRIM),
+
+GRIM = (process_Remove -> GRIMREAPER
+            |process_MoveToBackOfQueue -> GRIMREAPER).
+
+|| SCHEDULER = (QUEUE || GENERATOR || DISPATCHER || CPU || GRIMREAPER).
